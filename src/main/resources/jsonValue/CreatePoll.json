@@ -1,0 +1,18 @@
+{
+  "question":"Which Language is best ?",
+  "choices":[
+    {
+      "text":"Java"
+    },
+    {
+      "text":"Python"
+    },{
+
+      "text": "Swift"
+    }
+  ],
+  "pollDuration":{
+    "days":"0",
+    "hours":"1"
+  }
+}

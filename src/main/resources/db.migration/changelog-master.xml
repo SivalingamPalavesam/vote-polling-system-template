@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog">
+
+	<!-- <preConditions onFail="WARN"> 
+	<sqlCheck expectedResult="0"> 
+	SELECT(*) FROM users </sqlCheck> </preConditions> -->
+	 
+
+	<include file="db.migration/data.sql" />
+	<include file="db.migration/roles.csv" />
+	<!-- <include file="db.migration/insertdata.sql" /> -->	 
+	 
+	<changeSet id="9" author="sivalingam">
+        <loadData tableName="roles"
+                  file="roles.csv"
+                  separator=","
+                  relativeToChangelogFile="true"/>
+    </changeSet>
+    
+</databaseChangeLog>
